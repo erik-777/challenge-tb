@@ -1,5 +1,4 @@
 import { HEX_REGEX } from '../config/constants.js';
-//const { HEX_REGEX } = require('../config/constants');
 
 class FileModel {
     constructor(fileName, lines = []) {

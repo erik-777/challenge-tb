@@ -3,11 +3,6 @@ import cors from 'cors'
 import { PORT } from './src/config/constants.js'
 import Files from './src/routes/file.router.js'
 import errorHandler from './src/middleware/errorHandler.js'
-//const express = require('express')
-//cors')
-//const { PORT } = require('./src/config/constants')
-//const fileRouter = require('./src/routes/file.router')
-//const errorHandler = require('./src/middleware/errorHandler')
 
 
 const app = express()

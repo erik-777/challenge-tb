@@ -1,7 +1,5 @@
 import axios from 'axios'
 import { API_BASE_URL, API_KEY } from '../config/constants.js';
-//const axios = require("axios");
-//const { API_BASE_URL, API_KEY } = require("../config/constants");
 
 export default class FileService {
     constructor() {
@@ -15,11 +13,16 @@ export default class FileService {
     }
 
     async getFilesList() {
+
         try {
             const response = await this.client.get("/files");
-            return response.data || [];
+
+            const { files } = response.data
+
+            return files
 
         } catch (error) {
+            console.log(error)
 
             throw new Error("Error fetching files list");
         }
@@ -31,8 +34,6 @@ export default class FileService {
             return response.data || {};
 
         } catch (error) {
-
-            //console.error(`Error fetching file ${fileName}:`, error.message)
 
             return null
 

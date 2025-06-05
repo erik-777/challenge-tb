@@ -1,10 +1,8 @@
 import FileModel from '../model/file.model.js';
 import { REQUIRED_FIELDS_COUNT } from '../config/constants.js';
-//const FileModel = require('../model/file.model');
-//const { CSV_HEADERS, REQUIRED_FIELDS_COUNT } = require('../config/constants');
 
 
-class CsvFileParserService {
+export default class CsvFileParserService {
 
     parseContent(content, fileName) {
         if (!content || typeof content !== 'string') {
@@ -38,16 +36,11 @@ class CsvFileParserService {
                     validLine++;
                 } else {
                     invalidLine++;
-                    //console.log(`Invalid line ${i} in ${fileName}: ${lines[i]} (failed validation)`)
                 }
             } else {
                 invalidLine++;
-                //console.log(`Line ${i} in ${fileName} has ${values.length} fields, expected ${REQUIRED_FIELDS_COUNT}: ${lines[i]}`)
             }
         }
-
-        //console.log(`Parsed ${fileName}: ${validLine} valid lines, ${invalidLine} invalid lines`)
-
         return fileModel.hasValidLines() ? fileModel : null
     }
 
@@ -58,4 +51,3 @@ class CsvFileParserService {
 }
 
 //module.exports = new CsvFileParserService()
-export default CsvFileParserService;
