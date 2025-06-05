@@ -156,20 +156,14 @@ npm test
 Los tests incluyen:
 - Tests unitarios para modelos
 - Tests unitarios para servicios
-- Tests de integración para endpoints
-- Cobertura de casos de error
+- Tests unitarios para controladores
+
 
 ### Frontend
 
 ```bash
 cd frontend
-npm test
-```
 
-Los tests incluyen:
-- Tests de componentes
-- Tests de integración
-- Tests de servicios
 
 ## 🐛 Solución de Problemas
 
@@ -189,25 +183,11 @@ Los tests incluyen:
 ### Error de conexión con la API externa
 
 1. Verificar conexión a internet
-2. Ejecutar el script de diagnóstico:
-   ```bash
-   cd backend
-   node test-connection.js
-   ```
-
-### El frontend no se conecta al backend
-
-1. Verificar que el backend esté corriendo en el puerto 3001
-2. Verificar la configuración del proxy en `webpack.config.js`
-3. Revisar la consola del navegador para errores
 
 ## 📝 Notas Adicionales
 
 - El backend procesa archivos CSV y descarta automáticamente las líneas inválidas
 - Los archivos vacíos o que no se pueden descargar son omitidos
-- La aplicación incluye manejo de errores y estados de carga
-- El filtrado por archivo es opcional y se realiza mediante un dropdown en el frontend
-
 
 ## 📄 Licencia
 
