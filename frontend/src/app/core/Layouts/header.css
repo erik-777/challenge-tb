@@ -1,0 +1,122 @@
+/* Header Component Styles */
+
+/* .header {
+  background-color: #f87171; 
+  color: white;
+  padding: 1rem 1.5rem ;
+  top: auto;
+  position: fixed;
+
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+} */
+
+.header-bar {
+    background-color: #f87171;
+    padding: 1rem;
+    color: white;
+    text-align: left;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+
+
+
+/* Media Queries para Responsive Design */
+
+/* Mobile devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .app-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .app-header__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .app-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .app-header__title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop small (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .app-header {
+    padding: 1.25rem 2rem;
+  }
+
+  .app-header__title {
+    font-size: 1.375rem;
+  }
+}
+
+/* Desktop large (1025px and up) */
+@media screen and (min-width: 1025px) {
+  .app-header {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .app-header__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+/* Extra large screens (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .app-header {
+    padding: 1.75rem 3rem;
+  }
+
+  .app-header__title {
+    font-size: 1.625rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .app-header {
+    background-color: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    position: static !important;
+    padding: 0.5rem 0 !important;
+    border-bottom: 2px solid #000;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .app-header {
+    background-color: #dc2626;
+    border-bottom: 2px solid #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .app-header {
+    transition: none;
+  }
+}
+
+

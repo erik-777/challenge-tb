@@ -1,0 +1,76 @@
+/* Main Layout Styles */
+/* .main-layout {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  
+} */
+
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+/* .main-content {
+  flex: 6;
+  min-width: 0;
+  padding: 200;
+  position: absolute;
+  margin: 10 auto;
+  width: 100%;
+  align-items: center;
+}
+  */
+
+
+.table-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  
+  
+}
+
+/* Media Queries para Main Layout */
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .table-container {
+    border-radius: 0.25rem;
+    margin: 0 -0.25rem;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .main-content {
+    padding: 1.25rem 1rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1025px) {
+  .main-content {
+    padding: 2.5rem 2rem;
+  }
+}
