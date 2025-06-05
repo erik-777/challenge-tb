@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import TableComponent from "../../core/components/Table/Table";
-import { useFiles } from "./services/fileService";
+import { useFiles } from "../../services/fileService";
 
 const File = () => {
   const [data, setData] = useState([]);
