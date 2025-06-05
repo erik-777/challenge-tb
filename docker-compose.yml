@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: challenge-backend
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - TZ=America/Bogota
+    networks:
+      - app-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: challenge-frontend
+    ports:
+      - "3131:80"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://localhost:3001/
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+   app-network:
+    driver: bridge
